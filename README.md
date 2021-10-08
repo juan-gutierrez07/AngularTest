@@ -5,7 +5,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 # Notas
 
 Este proyecto en angular fue realizado con el proposito de realizar una prueba tecnica, en donde se evaluan el uso de Angular y el consumo de servicios REST.
-
+- Solo tener en cuenta que al correr el proyecto se utilizan 4 componentes, el principal app-component que es el que se crea por defecto cuando se crea el proyecto, 
+- cantidadventas, muetra las ventas registradas que fueron enviadas por un formulario.
+- ventas, es el formulario que toma la información de una venta para registrarlas.
+- tabla, es un componente que consume un servicio Rest, y solamente muestra la información obtenida en el servicio en una tabla.
 <!-- 
 ## Development server
 
