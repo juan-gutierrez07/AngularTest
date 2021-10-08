@@ -1,0 +1,39 @@
+<!-- <div class="container">
+  <div class="row">
+    <span>Esto viene desde {{ title }} </span>
+    <h2>
+      <button class="btn btn-primary" [disabled]="desa" (click)="this.changePerson()">Agregar</button>
+      <p>{{ mensaje }}</p>
+      <app-personas></app-personas>
+      <label>Titulo </label>
+      <input type ="text" class ="form-control" [(ngModel)]= "titulo"/>
+      <p>{{ titulo }}</p>
+    </h2>
+  </div>
+</div> -->
+<hr>
+<div class="container">
+  <app-ventas
+(ventaNueva) = "addVenta($event)">
+</app-ventas>
+<hr>
+<app-cantidadventas
+*ngFor = "let vent of ventas; let i = index"
+[venta] = "vent"
+[index] = "i"
+>
+</app-cantidadventas>
+<hr>
+<app-tabla
+
+>
+
+</app-tabla>
+
+</div>
+
+<!-- <app-calculadora></app-calculadora> -->
+
+<!-- <app-ciclos></app-ciclos> -->
+
+

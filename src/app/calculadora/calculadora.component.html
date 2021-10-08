@@ -1,0 +1,20 @@
+<div class="container">
+  <h5><b>Calculadora con angular</b></h5>
+  <form>
+    <div class="form-group">
+      <label>Dato 1</label>
+      <input class ="form-control" type="number" placeholder="Ingresa dato 1" [(ngModel)]= "numero1" name="numero1"/>
+      <label>Dato 2</label>
+      <input class ="form-control" type="number" placeholder="Ingresa dato 2" [(ngModel)]= "numero2" name="numero2"/>
+      <label>Tipo de operación</label>
+      <select class="form-control" >
+        <option *ngFor ="let tipos of operaciones | keyvalue" value="{{ tipos.value }}" [(ngModel)] ="operacion" name="operacion"> {{ tipos.key }}</option>
+      </select>
+      <!-- <button class="btn btn-success mt-2" type="submit" (click)="calcular()"> Calcular</button> -->
+   </div>
+  </form>
+  <p *ngIf="numero1 >0 && numero2 >0; else Negativo">{{ resul }}
+
+  </p>
+  <ng-template #Negativo > <p>No puede sumar negativos porque si</p></ng-template>
+</div>
